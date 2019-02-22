@@ -36,6 +36,11 @@ const ContainerDiv = Styled.div`
         flex-direction: row;
         flex: 1;
         font-size: 11px;     
+        span{
+          cursor: pointer;
+          margin-right: 25%;
+          font-weight: bold;
+        }
       ` : null
     )}
   ${props => (
@@ -46,16 +51,27 @@ const ContainerDiv = Styled.div`
         flex-direction: row;
         flex: 3;
         font-size: 9px;
+        span{
+          cursor: pointer;
+          margin-right: 5%;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       ` : null
     )}
   ${props => (
-    props.type === 'contianer-right' ? `
+    props.type === 'container-right' ? `
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       flex-direction: row;
-      flex: 3;
-      font-size: 9px;   
+      flex: 1;
+      font-size: 11px;
+      font-weight: bold;   
+      span{
+        cursor: pointer;
+      }
     ` : null
   )}
   ${props => (
@@ -73,7 +89,6 @@ const ContainerDiv = Styled.div`
       ` : null
     )}
 `
-
 const TopBar = () => {
   return (
     <ContainerDiv type = 'top-bar'>
